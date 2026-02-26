@@ -1,97 +1,90 @@
-/* ===== VARIABLES ELEGANTES ===== */
+/* ======================= */
+/* VARIABLES PRINCIPALES */
+/* ======================= */
 :root{
-  --bg-main: #0b0b0c;
-  --bg-secondary: #111114;
-  --bg-card: #151518;
+  --bg:#0a0a0b;
+  --bg-card:#141417;
 
-  --red-main: #8b0000;
-  --red-soft: #b30000;
-  --red-glow: rgba(139,0,0,0.4);
+  --text:#f4f4f5;
+  --muted:#a1a1aa;
 
-  --text-main: #f1f1f1;
-  --text-muted: #9a9a9a;
+  --line:#27272a;
 
-  --border: #222;
+  /* ROJOS BALANCEADOS */
+  --red-soft:#7f1d1d;     /* bordes suaves */
+  --red-main:#dc2626;     /* botones y detalles */
+  --red-bright:#ef4444;   /* hover y glow */
+  --red-glow:rgba(220,38,38,.25);
+
+  --shadow: 0 20px 60px rgba(0,0,0,.6);
+  --radius:16px;
 }
 
-/* ===== RESET ===== */
-
-*{
-  box-sizing: border-box;
-}
+/* ======================= */
+/* RESET GENERAL */
+/* ======================= */
+*{ box-sizing:border-box; margin:0; padding:0; }
 
 body{
-  margin:0;
-  background: var(--bg-main);
-  color: var(--text-main);
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background: linear-gradient(to bottom, #0a0a0b, #111114);
+  color: var(--text);
 }
 
-/* ===== CONTAINER ===== */
-
+/* ======================= */
+/* CONTENEDOR PRINCIPAL */
+/* ======================= */
 .container{
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
+  max-width:1100px;
+  margin:0 auto;
+  padding:28px 18px 60px;
 }
 
-/* ===== HEADER ===== */
-
+/* ======================= */
+/* TOPBAR / HEADER */
+/* ======================= */
 .topbar{
   display:flex;
-  justify-content: space-between;
-  align-items:center;
-  margin-bottom: 60px;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
 
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 20px;
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow: 0 0 25px rgba(139,0,0,.15);
 }
 
-.title{
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: 1px;
+.title{ font-size:44px; line-height:1.05; }
+.subtitle{ margin-top:10px; color: var(--muted); font-size:18px; }
+
+/* ======================= */
+/* SECCIONES GENERALES */
+/* ======================= */
+.section{
+  margin-top:22px;
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background: rgba(255,255,255,0.01);
+  transition: all .3s ease;
 }
 
-.subtitle{
-  color: var(--text-muted);
-  font-size: 14px;
-}
-
-/* ===== BUTTONS ===== */
-
-.btn{
-  border: 1px solid var(--red-main);
-  color: var(--red-main);
-  padding: 8px 18px;
-  text-decoration: none;
-  background: transparent;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.btn:hover{
-  background: var(--red-main);
-  color: white;
+/* ======================= */
+/* “SOBRE MÍ” DESTACADO */
+/* ======================= */
+.sobre-mi{
+  border:2px solid var(--red-main);
   box-shadow: 0 0 15px var(--red-glow);
 }
 
-.btn.active{
-  background: var(--red-main);
-  color: white;
-}
-
-/* ===== SECTIONS ===== */
-
-.section{
-  margin-bottom: 70px;
-}
-
+/* ======================= */
+/* ENCABEZADOS H2 */
+/* ======================= */
 h2{
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 25px;
+  font-size:22px;
+  font-weight:500;
+  margin-bottom:25px;
   position: relative;
 }
 
@@ -104,90 +97,63 @@ h2::after{
   margin-top:8px;
 }
 
-/* ===== PROFILE ===== */
+/* ======================= */
+/* GRID 2 COLUMNAS */
+/* ======================= */
+.grid2{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:18px;
+}
 
+@media(max-width:900px){
+  .grid2{grid-template-columns:1fr}
+  .title{font-size:36px}
+}
+
+/* ======================= */
+/* FOTO DE PERFIL / BIO */
+/* ======================= */
 .profile{
   display:flex;
-  gap:20px;
+  gap:18px;
+  align-items:stretch;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid var(--line);
 }
 
 .profile img{
-  width:120px;
-  height:120px;
-  object-fit: cover;
-  border-radius: 4px;
+  width:46%;
+  object-fit:cover;
+  display:block;
+  transition: all .4s ease;
+  border:1px solid var(--line);
+}
 
+.profile img:hover{
   border:1px solid var(--red-main);
+  box-shadow: 0 0 25px var(--red-glow);
 }
 
-/* ===== GRID ===== */
+.profile .bio{ padding:16px; }
 
-.grid2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:40px;
-}
-
-@media(max-width:800px){
-  .grid2{
-    grid-template-columns: 1fr;
-  }
-
-  .topbar{
-    flex-direction: column;
-    gap:20px;
-    align-items: flex-start;
-  }
-}
-
-/* ===== CARDS ===== */
-
-.cards{
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-}
-
-.card{
-  background: var(--bg-card);
-  padding:20px;
-
-  border: 1px solid var(--border);
-
-  transition: all 0.3s ease;
-}
-
-.card:hover{
-  border: 1px solid var(--red-main);
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px var(--red-glow);
-}
-
-.card h3{
-  margin-top:0;
-  font-weight:500;
-}
-
-/* ===== TEXT ===== */
-
-.muted{
-  color: var(--text-muted);
-  font-size: 14px;
-}
-
-/* ===== PILLS ===== */
-
+/* ======================= */
+/* PILLS / TAGS */
+/* ======================= */
 .pillrow{
-  margin-top:10px;
   display:flex;
   flex-wrap:wrap;
   gap:8px;
+  margin-top:10px;
 }
 
 .pill{
+  padding:6px 10px;
+  border-radius:999px;
   font-size:12px;
-  padding:4px 10px;
-  border:1px solid var(--red-main);
+  border:1px solid var(--red-soft);
+  background: transparent;
   color: var(--red-main);
 }
 
@@ -196,48 +162,104 @@ h2::after{
   color:white;
 }
 
-/* ===== REPO META ===== */
-
-.repoMeta{
-  display:flex;
-  gap:15px;
-  font-size:13px;
-  color: var(--text-muted);
-  margin: 10px 0;
+/* ======================= */
+/* TARJETAS DE PROYECTOS */
+/* ======================= */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
 }
 
-/* ===== INPUTS ===== */
+@media(max-width:950px){ .cards{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:620px){ .cards{grid-template-columns:1fr} }
 
+.card{
+  background: var(--bg-card);
+  border-radius:16px;
+  padding:14px;
+  border:1px solid var(--line);
+  box-shadow: var(--shadow);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition: all .3s ease;
+}
+
+.card:hover{
+  border:1px solid var(--red-main);
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px var(--red-glow);
+}
+
+/* ======================= */
+/* BOTONES */
+/* ======================= */
+.btn{
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--red-soft);
+  background: transparent;
+  color: var(--red-main);
+  cursor:pointer;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.btn:hover{
+  background: var(--red-main);
+  border-color: var(--red-bright);
+  color:white;
+  box-shadow: 0 0 15px var(--red-glow);
+}
+
+.btn.active{
+  background: var(--red-main);
+  color:white;
+}
+
+/* ======================= */
+/* BARRA DE HERRAMIENTAS / INPUTS */
+/* ======================= */
 .toolbar{
   display:flex;
   gap:10px;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:8px;
 }
 
 .input, .select{
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  color: var(--text-main);
-  padding: 8px;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#111;
+  color:white;
 }
 
 .input:focus, .select:focus{
   outline:none;
   border-color: var(--red-main);
+  box-shadow: 0 0 10px var(--red-glow);
 }
 
-/* ===== SCROLLBAR ===== */
-
-::-webkit-scrollbar{
-  width:8px;
+/* ======================= */
+/* META INFO DE REPOS / TEXTO MUTED */
+/* ======================= */
+.repoMeta{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  font-size:12px;
+  color: var(--muted);
 }
 
-::-webkit-scrollbar-thumb{
-  background: var(--red-main);
-}
+.muted{ color:var(--muted); }
 
-/* ===== SELECTION ===== */
-
-::selection{
-  background: var(--red-main);
-}
+/* ======================= */
+/* SELECCIÓN DE TEXTO / SCROLLBAR */
+/* ======================= */
+::selection{ background: var(--red-main); }
+::-webkit-scrollbar{ width:8px; }
+::-webkit-scrollbar-thumb{ background: var(--red-main); }
