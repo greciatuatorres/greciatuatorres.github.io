@@ -1,265 +1,290 @@
-/* ======================= */
-/* VARIABLES PRINCIPALES */
-/* ======================= */
-:root{
-  --bg:#0a0a0b;
-  --bg-card:#141417;
-
-  --text:#f4f4f5;
-  --muted:#a1a1aa;
-
-  --line:#580b07;
-
-  /* ROJOS BALANCEADOS */
-  --red-soft:#7f1d1d;     /* bordes suaves */
-  --red-main:#dc2626;     /* botones y detalles */
-  --red-bright:#ef4444;   /* hover y glow */
-  --red-glow:rgba(220,38,38,.25);
-
-  --shadow: 0 20px 60px rgba(0,0,0,.6);
-  --radius:16px;
+/* ------------------------------------------ */
+/* Reset y configuración general */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
-
-/* ======================= */
-/* RESET GENERAL */
-/* ======================= */
-*{ box-sizing:border-box; margin:0; padding:0; }
 
 body{
-  font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-  background: linear-gradient(to bottom, #0a0a0b, #111114);
-  color: var(--text);
+  font-family:'Inter',sans-serif;
+  background:#0b0b0b;
+  color:#eaeaea;
+  line-height:1.6;
 }
 
-/* ======================= */
-/* CONTENEDOR PRINCIPAL */
-/* ======================= */
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:28px 18px 60px;
-}
+/* ------------------------------------------ */
+/* NAVBAR */
 
-/* ======================= */
-/* TOPBAR / HEADER */
-/* ======================= */
-.topbar{
+.navbar{
   display:flex;
-  align-items:flex-start;
   justify-content:space-between;
-  gap:16px;
-
-  padding:24px;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  box-shadow: 0 0 25px rgba(139,0,0,.15);
+  align-items:center;
+  padding:20px 10%;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.title{ font-size:44px; line-height:1.05; }
-.subtitle{ margin-top:10px; color: var(--muted); font-size:18px; }
-
-/* ======================= */
-/* SECCIONES GENERALES */
-/* ======================= */
-.section{
-  margin-top:22px;
-  padding:22px;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  background: rgba(255,255,255,0.01);
-  transition: all .3s ease;
+.navbar a{
+  color:#aaa;
+  text-decoration:none;
+  margin-left:20px;
+  transition:0.3s;
 }
 
-/* ======================= */
-/* “SOBRE MÍ” DESTACADO */
-/* ======================= */
-.sobre-mi{
-  border:2px solid var(--red-main);
-  box-shadow: 0 0 15px var(--red-glow);
+.navbar a:hover{
+  color:#ff2e2e;
 }
 
-/* ======================= */
-/* ENCABEZADOS H2 */
-/* ======================= */
-h2{
-  font-size:22px;
-  font-weight:500;
-  margin-bottom:25px;
-  position: relative;
-}
+/* ------------------------------------------ */
+/* HERO */
 
-h2::after{
-  content:"";
-  display:block;
-  width:40px;
-  height:2px;
-  background: var(--red-main);
-  margin-top:8px;
-}
-
-/* ======================= */
-/* GRID 2 COLUMNAS */
-/* ======================= */
-.grid2{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:18px;
-}
-
-@media(max-width:900px){
-  .grid2{grid-template-columns:1fr}
-  .title{font-size:36px}
-}
-
-/* ======================= */
-/* FOTO DE PERFIL / BIO */
-/* ======================= */
-.profile{
+.hero{
+  height:70vh;
   display:flex;
-  gap:18px;
-  align-items:stretch;
-  border-radius:16px;
-  overflow:hidden;
-  border:1px solid var(--line);
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 20% 20%, #4a0000, transparent),
+    radial-gradient(circle at 80% 80%, #200000, transparent);
+  padding:0 10%;
 }
 
-.profile img{
-  width:46%;
-  object-fit:cover;
-  display:block;
-  transition: all .4s ease;
-  border:1px solid var(--line);
-}
-
-.profile img:hover{
-  border:1px solid var(--red-main);
-  box-shadow: 0 0 25px var(--red-glow);
-}
-
-.profile .bio{ padding:16px; }
-
-/* ======================= */
-/* PILLS / TAGS */
-/* ======================= */
-.pillrow{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:10px;
-}
-
-.pill{
-  padding:6px 10px;
-  border-radius:999px;
-  font-size:12px;
-  border:1px solid var(--red-soft);
-  background: transparent;
-  color: var(--red-main);
-}
-
-.pill.featured{
-  background: var(--red-main);
-  color:white;
-}
-
-/* ======================= */
-/* TARJETAS DE PROYECTOS */
-/* ======================= */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
-
-@media(max-width:950px){ .cards{grid-template-columns:repeat(2,1fr)} }
-@media(max-width:620px){ .cards{grid-template-columns:1fr} }
-
-.card{
-  background: var(--bg-card);
-  border-radius:16px;
-  padding:14px;
-  border:1px solid var(--line);
-  box-shadow: var(--shadow);
+.hero-content {
   display:flex;
   flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
   gap:10px;
-  transition: all .3s ease;
 }
 
-.card:hover{
-  border:1px solid var(--red-main);
-  transform: translateY(-6px);
-  box-shadow: 0 0 30px var(--red-glow);
+/* Rol (subtitulo) con subrayado elegante */
+.hero .role {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #ff2e2e;
+  font-weight:600;
+  position: relative;
+  display: inline-block;
 }
 
-/* ======================= */
+.hero .role::after {
+  content:"";
+  position:absolute;
+  width:100%;
+  height:3px;
+  background-color:#8b0000; /* rojo carmesí oscuro */
+  left:0;
+  bottom:-5px;
+  border-radius:2px;
+}
+
+/* Nombre con glow */
+.hero .name {
+  font-family:'Playfair Display', serif;
+  font-size:48px;
+  color:#fff;
+  font-weight:700;
+  text-shadow:0 0 10px rgba(255,46,46,0.5);
+}
+
+/* Texto descriptivo debajo */
+.hero p{
+  color:#aaa;
+  margin-top:15px;
+  margin-bottom:30px;
+  font-size:16px;
+}
+
+/* Botones hero */
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+/* ------------------------------------------ */
 /* BOTONES */
-/* ======================= */
+
 .btn{
-  padding:10px 12px;
-  border-radius:12px;
-  border:1px solid var(--red-soft);
-  background: transparent;
-  color: var(--red-main);
-  cursor:pointer;
+  padding:12px 22px;
+  background:#ff2e2e;
+  color:white;
+  border-radius:8px;
   text-decoration:none;
-  transition:.3s;
+  transition:0.3s;
 }
 
 .btn:hover{
-  background: var(--red-main);
-  border-color: var(--red-bright);
-  color:white;
-  box-shadow: 0 0 15px var(--red-glow);
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(255,0,0,0.4);
 }
 
-.btn.active{
-  background: var(--red-main);
-  color:white;
+.btn.ghost{
+  background:transparent;
+  border:1px solid #ff2e2e;
 }
 
-/* ======================= */
-/* BARRA DE HERRAMIENTAS / INPUTS */
-/* ======================= */
-.toolbar{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
+/* ------------------------------------------ */
+/* SECCIONES */
+
+.section{
+  padding:80px 10%;
+}
+
+.section h2{
+  font-size:32px;
+  margin-bottom:40px;
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content:"";
+  position:absolute;
+  width:60px; /* largo del subrayado */
+  height:4px;
+  background-color:#8b0000; /* rojo carmesí oscuro */
+  left:0;
+  bottom:-8px;
+  border-radius:2px;
+}
+
+/* Espacio entre párrafos y cards */
+.section p, 
+.section .about-grid, 
+.section .cards {
+  margin-bottom:30px;
+}
+
+/* ------------------------------------------ */
+/* ABOUT */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:200px 1fr;
+  gap:40px;
   align-items:center;
-  margin-top:8px;
 }
 
-.input, .select{
-  padding:10px 12px;
-  border-radius:12px;
-  border:1px solid var(--line);
+.profile{
+  width:200px;
+  border-radius:10px;
+}
+
+.skills span{
+  display:inline-block;
+  padding:6px 12px;
+  border:1px solid #ff2e2e;
+  border-radius:20px;
+  margin:5px;
+  font-size:14px;
+}
+
+/* ------------------------------------------ */
+/* CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
   background:#111;
-  color:white;
+  padding:25px;
+  border-radius:10px;
+  border:1px solid #222;
+  transition:0.4s;
 }
 
-.input:focus, .select:focus{
-  outline:none;
-  border-color: var(--red-main);
-  box-shadow: 0 0 10px var(--red-glow);
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#ff2e2e;
+  box-shadow:0 10px 30px rgba(255,0,0,0.2);
 }
 
-/* ======================= */
-/* META INFO DE REPOS / TEXTO MUTED */
-/* ======================= */
-.repoMeta{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  align-items:center;
-  font-size:12px;
-  color: var(--muted);
+.card h3{
+  margin-bottom:10px;
 }
 
-.muted{ color:var(--muted); }
+.card p{
+  color:#aaa;
+  margin-bottom:15px;
+}
 
-/* ======================= */
-/* SELECCIÓN DE TEXTO / SCROLLBAR */
-/* ======================= */
-::selection{ background: var(--red-main); }
-::-webkit-scrollbar{ width:8px; }
-::-webkit-scrollbar-thumb{ background: var(--red-main); }
+/* Animaciones */
+.fade-up {
+  opacity:0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.card{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ------------------------------------------ */
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:40px;
+  color:#777;
+}
+
+/* ------------------------------------------ */
+/* DESTACADO CONTACTO */
+.highlight-contact {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff2e2e;
+  text-shadow: 0 0 8px rgba(255,46,46,0.6),
+               0 0 16px rgba(255,46,46,0.4);
+  transform: translateY(20px);
+  opacity: 0; /* empieza invisible */
+  transition: all 1s ease;
+}
+
+.highlight-contact:hover {
+  text-shadow: 0 0 16px rgba(255,46,46,0.8),
+               0 0 32px rgba(255,46,46,0.6);
+}
+
+/* ------------------------------------------ */
+/* TOOLBAR (Buscar repositorio / Actividad reciente) */
+.toolbar input,
+.toolbar select {
+  background-color:#111;
+  color:#fff;
+  border:1px solid #ff2e2e;
+  padding:8px 12px;
+  border-radius:6px;
+  font-size:14px;
+  margin-bottom:20px; /* separación de las cartas */
+}
+
+.toolbar input::placeholder {
+  color:#ccc;
+}
+
+.toolbar select option{
+  background-color:#111;
+  color:#eadede;
+}

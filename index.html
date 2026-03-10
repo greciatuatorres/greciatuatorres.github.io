@@ -2,212 +2,284 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> Grecia Tua Torres — CV & Repos</title>
-  <meta name="description" content="CV y repositorios destacados en GitHub." />
-  <link rel="stylesheet" href="/assets/css/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Grecia Tua Torres | Portfolio</title>
+
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="container">
-  <header class="topbar">
-    <div>
-      <h1 class="title">Grecia Tua Torres</h1>
-      <div class="subtitle">Estudiante de Desarrollo de Aplicaciones Multiplataforma (1º DAM)</div>
-    </div>
-    <nav style="display:flex;gap:10px">
-      <a class="btn" href="https://www.linkedin.com/in/grecia-tua-20b4ba3b2" target="_blank">LinkedIn</a>
-      <a class="btn" href="https://github.com/greciatuatorres" target="_blank">GitHub</a>
-      <a class="btn" href="mailto:tuagrecia@gmail.com">Email</a>
-    </nav>
-  </header>
 
-  <section class="section">
-    <h2>Sobre mí</h2>
-    <div class="grid2">
-      <div class="profile">
-       <img src="assets/img/d1ce8bd3-1ee0-4aa0-a821-26aa6b031147.jpg" alt="FotodePerfil" class="profile-img">
-        <div class="bio">
-          <p class="muted" style="margin:0">
-            Apasionada por la programación y desarrollo web. Experimentando y Aprendiendo en Java, SQL, HTML/CSS y diseño de la interfáz gráfica de la web. Busco crecer en backend y mejorar la experiencia del usuario en aplicaciones.
-        </p>
-          </p>
-          <div class="pillrow">
-            <span class="pill">Java</span>
-            <span class="pill">SQL</span>
-            <span class="pill">HTML/CSS</span>
-            <span class="pill">Git</span>
-          </div>
-        </div>
-      </div>
+<header class="navbar">
 
-      <div>
-        <h3 style="margin:0 0 10px">Experiencia / Proyectos de clase</h3>
-        <ul class="muted" style="margin:0;padding-left:18px">
-          <li>Proyecto DAM: “App de Notas” (CRUD + BBDD)</li>
-          <li>Proyecto Java: “Gestor de tareas” (POO + tests)</li>
-        </ul>
-
-        <h3 style="margin:16px 0 10px">Objetivo</h3>
-        <p class="muted" style="margin:0">
-           Busco prácticas para perfeccionar mis habilidades en backend y bases de datos, y contribuir al desarrollo de aplicaciones web eficientes.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Proyectos destacados (topic: <code>showcase</code>)</h2>
-    <div id="featured" class="cards"></div>
-    <p class="muted" style="margin:10px 0 0">
-      Para que un repo salga aquí, añade el topic <b>showcase</b> en GitHub.
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Mis repositorios</h2>
-    <div class="toolbar">
-      <input id="q" class="input" placeholder="Buscar repositorios..." />
-      <select id="sort" class="select">
-        <option value="updated">Ordenar: actividad reciente</option>
-        <option value="stars">Ordenar: estrellas</option>
-        <option value="name">Ordenar: nombre</option>
-      </select>
-      <button class="btn active" data-topic="all">Todos</button>
-      <button class="btn" data-topic="showcase">showcase</button>
-      <button class="btn" data-topic="web">web</button>
-      <button class="btn" data-topic="backend">backend</button>
-    </div>
-
-    <div style="height:12px"></div>
-    <div id="repos" class="cards"></div>
-  </section>
+<div class="logo">
 </div>
 
+<nav>
+<a href="#about">Sobre mí</a>
+<a href="#experiencia">Experiencia</a>
+<a href="#projects">Proyectos</a>
+<a href="#repos">Repositorios</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="role">Desarrolladora Web en formación</h1>
+    <h2 class="name">Grecia Tua Torres</h2>
+    <p>Controlando sistemas, construyendo la web.</p>
+
+    <div class="hero-buttons">
+      <a class="btn" href="#contacto">Contáctame</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<section id="about" class="section">
+
+<h2>Sobre mí</h2>
+
+<div class="about-grid">
+
+<img src="assets/img/d1ce8bd3-1ee0-4aa0-a821-26aa6b031147.jpg" class="profile">
+
+<div>
+
+<p>
+Soy Grecia Tua Torres, estudiante de DAM.
+Transformo ideas en código, bases de datos y experiencias web.
+Me gusta dominar terminales, sistemas y herramientas de desarrollo, siempre buscando crear soluciones funcionales y bien diseñadas.
+Mi objetivo: aprender, crecer y dejar huella en cada proyecto.
+</p>
+
+<div class="skills">
+
+<span>Java</span>
+<span>SQL</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>Git</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="experiencia" class="section">
+
+<h2>Experiencia</h2>
+<p class="muted">
+Actualmente estoy formándome en Desarrollo de Aplicaciones Multiplataforma.
+Durante mi aprendizaje he adquirido conocimientos en las siguientes tecnologías:
+</p>
+
+<div class="cards">
+
+<article class="card">
+<h3>Java</h3>
+<p>Programación orientada a objetos, y desarrollo de aplicaciones sencillas.</p>
+</article>
+
+<article class="card">
+<h3>SQL y Bases de Datos</h3>
+<p>Creación de tablas, consultas SQL y operaciones CRUD básicas.</p>
+</article>
+
+<article class="card">
+<h3>Desarrollo Web</h3>
+<p>Creación de páginas web sencillas utilizando HTML, CSS y JavaScript.</p>
+</article>
+
+<article class="card">
+<h3>Control de versiones</h3>
+<p>Uso de Git y GitHub para gestionar proyectos y repositorios.</p>
+</article>
+
+</div>
+
+</section>
+
+<section id="projects" class="section">
+
+<h2>Proyectos destacados</h2>
+
+<div id="featured" class="cards"></div>
+
+</section>
+
+
+<section id="repos" class="section">
+
+<h2>Repositorios</h2>
+
+<div class="toolbar">
+
+<input id="q" placeholder="Buscar repositorios...">
+
+<select id="sort">
+
+<option value="updated">Actividad reciente</option>
+<option value="stars">Más estrellas</option>
+<option value="name">Nombre</option>
+
+</select>
+
+</div>
+
+<div id="repos-list" class="cards"></div>
+
+</section>
+
+<section id="contacto" class="section">
+
+<h2>Contacto</h2>
+
+<div class="cards">
+
+<article class="card">
+
+<h3>Email</h3>
+
+<p>Puedes escribirme directamente a mi correo.</p>
+
+<a class="btn ghost" href="mailto:tuagrecia@gmail.com">
+Enviar email
+</a>
+
+</article>
+
+<article class="card">
+
+<h3>GitHub</h3>
+
+<p>Aquí puedes ver todos mis proyectos y repositorios.</p>
+
+<a class="btn ghost" href="https://github.com/greciatuatorres" target="_blank">
+Ver GitHub
+</a>
+
+</article>
+
+<article class="card">
+
+<h3>LinkedIn</h3>
+
+<p>Conecta conmigo profesionalmente.</p>
+
+<a class="btn ghost" href="https://www.linkedin.com/in/grecia-tua-20b4ba3b2" target="_blank">
+Ver LinkedIn
+</a>
+
+</article>
+</div>
+ <!-- Frase adicional-->
+<p id="highlight-contact" class="highlight-contact">
+    Disponible para prácticas y oportunidades junior
+  </p>
+</section>
+
+<footer>
+
+<p>
+© 2026 Grecia Tua Torres
+</p>
+
+</footer>
+
+<script src="assets/js/github.js"></script>
+
+</body>
 <script>
-  const GITHUB_USERNAME = "greciatuatorres"; // <- CAMBIA ESTO
-  const FEATURED_TOPIC = "showcase";
-  let allRepos = [];
-  let activeTopic = "all";
-
-  function formatDate(iso){
-    const d = new Date(iso);
-    return d.toLocaleDateString("es-ES", {year:"numeric", month:"short", day:"2-digit"});
-  }
-  function cardBorderByIndex(i){
-    return ["border-blue","border-violet","border-emerald"][i % 3];
-  }
-
-  async function fetchRepos(){
-    const url = `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`;
-    const res = await fetch(url, { headers: { "Accept":"application/vnd.github+json" }});
-    if(!res.ok) throw new Error("No se pudo leer la API de GitHub. Revisa tu usuario.");
-    const repos = await res.json();
-    return repos.map(r => ({
-      name: r.name,
-      html_url: r.html_url,
-      description: r.description || "",
-      language: r.language || "—",
-      stargazers_count: r.stargazers_count || 0,
-      updated_at: r.updated_at,
-      topics: r.topics || []
-    }));
-  }
-
-  function renderFeatured(repos){
-    const featured = repos.filter(r => r.topics.includes(FEATURED_TOPIC)).slice(0, 6);
-    const el = document.getElementById("featured");
-    el.innerHTML = featured.length ? "" : `<div class="muted">Aún no tienes repos con topic <b>${FEATURED_TOPIC}</b>.</div>`;
-
-    featured.forEach((r, i) => {
-      const topics = r.topics.slice(0, 4).map(t => `<span class="pill">${t}</span>`).join("");
-      el.insertAdjacentHTML("beforeend", `
-        <article class="card ${cardBorderByIndex(i)}">
-          <h3>${r.name}</h3>
-          <div class="muted">${r.description || "Sin descripción (añádela en GitHub 😉)"}</div>
-          <div class="pillrow">
-            <span class="pill featured">Featured</span>
-            ${topics}
-          </div>
-          <div class="repoMeta">
-            <span>⭐ ${r.stargazers_count}</span>
-            <span>🧩 ${r.language}</span>
-            <span>🕒 ${formatDate(r.updated_at)}</span>
-          </div>
-          <a class="btn" href="${r.html_url}" target="_blank" rel="noreferrer">Ver repo</a>
-        </article>
-      `);
-    });
-  }
-
-  function applyFilters(repos){
-    const q = (document.getElementById("q").value || "").toLowerCase();
-    const sort = document.getElementById("sort").value;
-
-    let out = repos.filter(r => {
-      const matchesText = r.name.toLowerCase().includes(q) || (r.description||"").toLowerCase().includes(q);
-      const matchesTopic = activeTopic === "all" ? true : r.topics.includes(activeTopic);
-      return matchesText && matchesTopic;
-    });
-
-    if (sort === "updated") out.sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at));
-    if (sort === "stars") out.sort((a,b) => (b.stargazers_count||0) - (a.stargazers_count||0));
-    if (sort === "name") out.sort((a,b) => a.name.localeCompare(b.name));
-    return out;
-  }
-
-  function renderRepos(repos){
-    const el = document.getElementById("repos");
-    const list = applyFilters(repos);
-    el.innerHTML = list.length ? "" : `<div class="muted">No hay resultados con esos filtros.</div>`;
-
-    list.forEach((r, i) => {
-      const topics = (r.topics && r.topics.length)
-        ? r.topics.slice(0, 6).map(t => `<span class="pill">${t}</span>`).join("")
-        : `<span class="pill">sin topics</span>`;
-
-      el.insertAdjacentHTML("beforeend", `
-        <article class="card ${cardBorderByIndex(i)}">
-          <h3>${r.name}</h3>
-          <div class="muted">${r.description || "Sin descripción"}</div>
-          <div class="pillrow">${topics}</div>
-          <div class="repoMeta">
-            <span>⭐ ${r.stargazers_count}</span>
-            <span>🧩 ${r.language}</span>
-            <span>🕒 ${formatDate(r.updated_at)}</span>
-          </div>
-          <a class="btn" href="${r.html_url}" target="_blank" rel="noreferrer">Abrir</a>
-        </article>
-      `);
-    });
-  }
-
-  function bindUI(){
-    document.getElementById("q").addEventListener("input", () => renderRepos(allRepos));
-    document.getElementById("sort").addEventListener("change", () => renderRepos(allRepos));
-    document.querySelectorAll(".btn[data-topic]").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".btn[data-topic]").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        activeTopic = btn.dataset.topic;
-        renderRepos(allRepos);
-      });
-    });
-  }
-
-  async function main(){
-    bindUI();
-    allRepos = await fetchRepos();
-    renderFeatured(allRepos);
-    renderRepos(allRepos);
-  }
-
-  main().catch(err => {
-    document.getElementById("featured").innerHTML = `<div class="muted">${err.message}</div>`;
-    document.getElementById("repos").innerHTML = `<div class="muted">${err.message}</div>`;
-    console.error(err);
+  window.addEventListener("DOMContentLoaded", () => {
+    const highlight = document.getElementById("highlight-contact");
+    setTimeout(() => {
+      highlight.style.opacity = "1";
+      highlight.style.transform = "translateY(0)";
+    }, 200); 
   });
-</script>
 
+</script>
+<body>
+  <!-- Todo tu contenido HTML -->
+
+  <script>
+const GITHUB_USERNAME = "greciatuatorres"; // tu usuario de GitHub
+let allRepos = [];
+
+// Función para obtener los repos de GitHub
+async function fetchRepos() {
+  const url = `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`;
+  const res = await fetch(url, {
+    headers: { "Accept": "application/vnd.github+json" }
+  });
+  if(!res.ok) throw new Error("No se pudo leer la API de GitHub. Revisa tu usuario.");
+  
+  const repos = await res.json();
+  return repos.map(r => ({
+    name: r.name,
+    html_url: r.html_url,
+    description: r.description || "",
+    language: r.language || "—",
+    topics: r.topics || []
+  }));
+}
+
+// Renderizar proyectos destacados (repos con topic "showcase")
+function renderFeatured(repos) {
+  const featured = repos.filter(r => r.topics.includes("showcase"));
+  const el = document.getElementById("featured");
+  el.innerHTML = "";
+
+  featured.forEach((r, i) => {
+    el.insertAdjacentHTML("beforeend", `
+      <article class="card fade-up">
+        <h3>${r.name}</h3>
+        <p>${r.description || "Sin descripción"}</p>
+        <a class="btn ghost" href="${r.html_url}" target="_blank">Ver repositorio</a>
+      </article>
+    `);
+  });
+}
+
+// Renderizar todos los repositorios
+function renderRepos(repos) {
+  const el = document.getElementById("repos-list");
+  el.innerHTML = "";
+
+  repos.forEach((r, i) => {
+    el.insertAdjacentHTML("beforeend", `
+      <article class="card fade-up">
+        <h3>${r.name}</h3>
+        <p>${r.description || "Sin descripción"}</p>
+        <a class="btn ghost" href="${r.html_url}" target="_blank">Ver repositorio</a>
+      </article>
+    `);
+  });
+}
+
+// Función principal
+async function main() {
+  allRepos = await fetchRepos();
+  renderFeatured(allRepos);
+  renderRepos(allRepos);
+}
+
+// Cargar todo
+main().catch(err => {
+  console.error(err);
+  document.getElementById("repos-list").innerHTML = `<div class="muted">${err.message}</div>`;
+  document.getElementById("featured").innerHTML = `<div class="muted">${err.message}</div>`;
+});
+</script>
 </body>
 </html>
